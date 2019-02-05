@@ -278,7 +278,7 @@ class ValidVariableNameSniff extends AbstractVariableSniff
      */
     protected function strToLowerStringIfNecessary($namePart)
     {
-        if (PHP_CodeSniffer::isCamelCaps($namePart, false, true, true) === false) {
+        if (Common::isCamelCaps($namePart, false, true, true) === false) {
             $namePart = strtolower($namePart);
         }
 
