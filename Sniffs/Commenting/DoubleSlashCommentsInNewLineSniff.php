@@ -63,7 +63,7 @@ class DoubleSlashCommentsInNewLineSniff implements Sniff
         $keyword = $tokens[$stackPtr]['content'];
         if (substr($keyword, 0, 2) === '//' && $this->existsOtherCodeBeforeThisComment($tokens, $stackPtr) === true) {
             $error = 'The double slash comments must be on a seperate line.';
-            $phpcsFile->addError($error, $stackPtr);
+            $phpcsFile->addError($error, $stackPtr, 'DoubleSlashCommentInNewLine');
         }
 
     }//end process()
